@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Home from "../screens/Home";
+import Feed from "../screens/Home";
 import Pedido from "../screens/Pedido";
 
 const Tab = createBottomTabNavigator();
@@ -12,7 +12,7 @@ const BottomTabNavigator = () => {
             screenOptions={({ route }) => ({
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
-                    if (route.name === 'Home') {
+                    if (route.name === 'Feed') {
                         iconName = focused
                             ? 'home'
                             : 'home-outline';
@@ -27,7 +27,7 @@ const BottomTabNavigator = () => {
                 inactiveTintColor: 'gray',
             }}
         >
-            <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Feed" component={Feed} />
             <Tab.Screen name="Pedido" component={Pedido} />
         </Tab.Navigator>
     );
